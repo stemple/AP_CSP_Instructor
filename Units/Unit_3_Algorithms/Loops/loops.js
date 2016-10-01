@@ -75,3 +75,7 @@ function shuffle(someArr) {
     }
     return shuffledArr;
 }
+
+function checkZipList(codes){
+    
+}
