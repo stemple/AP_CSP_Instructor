@@ -1,5 +1,5 @@
 function returnFive() {
-    var x = 4;
+    var x = 5;
     return x;
 }
 
