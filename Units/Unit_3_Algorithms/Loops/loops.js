@@ -13,7 +13,7 @@ function factorial(number) {
     return result;
 }
 
-function testPrime(number) {
+function checkPrime(number) {
     var stop = Math.floor(number / 2);
     for (i = 2; i <= stop; ++i) {
         if (number % i == 0) {
