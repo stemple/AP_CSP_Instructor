@@ -60,3 +60,18 @@ function stack(num) {
     }
     return sout;
 }
+
+function shuffle(someArr) {
+    var shuffledArr = someArr;
+    var max = shuffledArr.length;
+    var range;
+    var index;
+    for (i = 0; i < shuffledArr.length; i++) {
+        range = max - i;
+        index = Math.floor(Math.random() * range) + i;
+        var temp = shuffledArr[i];
+        shuffledArr[i] = shuffledArr[index];
+        shuffledArr[index] = temp;
+    }
+    return shuffledArr;
+}
