@@ -6,7 +6,7 @@
  * @customfunction
  */
 function DOUBLE(input) {
-  return input * 2;
+    return input * 2;
 }
 
 /**
@@ -17,7 +17,7 @@ function DOUBLE(input) {
  * @return The hypotenuse length
  * @customfunction
  */
-function HYPOTENUSE(a, b){
-    var c = Math.pow((Math.pow(a,2) + Math.pow(b,2)), .5);
+function HYPOTENUSE(a, b) {
+    var c = Math.pow((Math.pow(a, 2) + Math.pow(b, 2)), 0.5);
     return c;
 }
