@@ -61,21 +61,22 @@ function stack(num) {
     return sout;
 }
 
-function shuffle(someArr) {
-    var shuffledArr = someArr;
-    var max = shuffledArr.length;
+function shuffle(a) {
     var range;
     var index;
-    for (i = 0; i < shuffledArr.length; i++) {
-        range = max - i;
-        index = Math.floor(Math.random() * range) + i;
-        var temp = shuffledArr[i];
-        shuffledArr[i] = shuffledArr[index];
-        shuffledArr[index] = temp;
+    for (i = a.length-1; i > 0; i--) {
+        index = Math.floor(Math.random() * (i+1));
+        var temp = a[i];
+        a[i] = a[index];
+        a[index] = temp;
     }
-    return shuffledArr;
+    return a;
 }
 
 function checkZipList(codes){
     
+}
+
+function validPhoneList(numbers) {
+    return "EMPTY";
 }
