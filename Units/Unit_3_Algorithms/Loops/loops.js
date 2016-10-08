@@ -86,3 +86,23 @@ function validPhoneList(nums) {
     }
     return validNums;
 }
+
+function validZipList(codes) {
+    var validZips = [];
+    for(i = 0; i < codes.length; i++) {
+        if(codes[i].length == 5 && Number(codes[i]) && codes[i].charAt(0) == "9") {
+            validZips.push(codes[i]);
+        }
+    }
+    return validZips;
+}
+
+function validZipList(codes) {
+    var validZips = [];
+    for(i = 0; i < codes.length; i++) {
+        if(codes[i].length == 5 && Number(codes[i]) && codes[i].charAt(0) == "9") {
+            validZips.push(codes[i]);
+        }
+    }
+    return validZips;
+}
