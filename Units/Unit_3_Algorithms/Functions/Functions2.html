@@ -1,16 +1,19 @@
 <html>
   <head>
+    <script language="javascript" type="text/javascript" src="functions.js"></script>
   </head>
-  <body>
+<body>
     <h1>A Function with Parameters</h1>
     <p>This example calls a function which performs a calculation, and returns the result:</p>
     <script>
       function theSum(a, b) {
         return a + b;
       }
-      document.write(theSum(4, 3), "<br>");
-      document.write(theSum(5, -2), "<br>");
-      document.write(theSum(6.2, 7.8));
+      document.write(theSum(4, 3), "</br>");
+      document.write(theSum(5, -2), "</br>");
+      document.write(theSum(6.2, 7.8), "</br>");
+      // This is the new line below!
+      document.write(theProduct(4, 3), "</br>");
     </script>
   </body>
 </html>

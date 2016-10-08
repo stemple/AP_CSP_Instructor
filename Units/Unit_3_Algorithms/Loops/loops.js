@@ -77,6 +77,12 @@ function checkZipList(codes){
     
 }
 
-function validPhoneList(numbers) {
-    return "EMPTY";
+function validPhoneList(nums) {
+    var validNums = [];
+    for (i = 0; i < nums.length; i++) {
+        if (nums[i].charAt(3) == "-" && nums[i].length == 8 && Number(nums[i].slice(0, 3)) && Number(nums[i].slice(4))) {
+            validNums.push(nums[i]);
+        }
+    }
+    return validNums;
 }
