@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:powderblue;">
+    <h1>HTML BASICS</h1>
+    <p>This file contians the examples of HTML basics.</p>
+    <hr/>
+    <h1>EXAMPLE 1:  HTML Headings</h1>
+    <h1>HEADER 1</h1>
+    <h2>HEADER 2</h2>
+    <h3>HEADER 3</h3>
+    <h4>HEADER 4</h4>
+    <h5>HEADER 5</h5>
+    <h6>HEADER 6</h6>
+    <hr/>
+    <h1>EXAMPLE 2: HTML Displays</h1>
+    <p>This is a paragraph 1.</p>
+    <p>This is a paragraph 2.</p>
+    <p>This is a paragraph
+        <br>with a line break.</p>
+    <p> If you think this text will appear over several lines like it does here you would be wrong. </p> <pre>
+     This example
+     will appear
+     just like it
+     is displayed
+     here because
+     of the pre
+     tag that was
+     used.</pre>
+    <hr/>
+    <h1 style="color:blue;">EXAMPLE 3: HTML Color</h1>
+    <p style="color:red;">The header above is blue. This paragraph is red.</p>
+    <h4 style="font-family:verdana;">A Verdana Heading.</h4>
+    <p style="font-family:courier;">This is a paragraph with courier font.</p>
+    <p style="font-size:300%;">This font size is 300%</p>
+    <p style="font-size:75%;">This paragraph is 75%.</p>
+    <h3 style="text-align:center;">Centered Heading!</h3>
+    <p style="text-align:center;">This paragraph has been centered just for you.</p>
+    <hr/>
+    <h1>EXAMPLE 4: HTML Images</h1> <img src="bulldawg.jpg" alt="bulldawg pict here" style="width:128px;height:128px;">
+    <br> <img src="bulldawg.jpg" alt="bulldawg pict here" width="128" height="128">
+    <p><img src="bulldawg.jpg" alt="DAWGS" style="float:right;width:32px;height:32px;"> BULLDAWG TO THE RIGHT! </p>
+    <p><img src="bulldawg.jpg" alt="DAWGS" style="float:left;width:32px;height:32px;"> BULLDAWG TO THE LEFT! </p>
+    <h1>EXAMPLE 5: HTML Links</h1>
+    <style>
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    </style> <a href="http://sanrafael.srcs.org">CLICK HERE TO SHOW YOUR DAWG PRIDE!</a>
+    <br> <a href="http://sanrafael.srcs.org" target="_blank">BLANK TARGET</a>
+    <br> <a href="http://sanrafael.srcs.org" target="_self">SELF TARGET</a>
+    <br> <a href="http://sanrafael.srcs.org" target="_parent">PARENT TARGET</a>
+    <br> <a href="http://sanrafael.srcs.org" target="_top">TOP TARGET</a>
+    <br>
+    <a href="http://sanrafael.srcs.org"> <img src="bulldawg.jpg" alt="DAWGS" style="width:32px;height:32px;border:0;"> </a>
+    <hr/>
+<h1>EXAMPLE 6 - HTML Tables</h1>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<table style="width:100%">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Anita</td>
+        <td>Goodgrade</td>
+        <td>17</td>
+    </tr>
+    <tr>
+        <td>Seymour</td>
+        <td>Butz</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Amanda</td>
+        <td>Hugginkiss</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>Oliver</td>
+        <td>Homework</td>
+        <td>18</td>
+    </tr>
+</table>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    table#t01 {
+        width: 100%;
+        background-color: cadetblue;
+    }
+
+    table#t02 {
+        width: 100%;
+    }
+
+    table#t02 tr:nth-child(even) {
+        background-color: whitesmoke;
+    }
+
+    table#t02 tr:nth-child(odd) {
+        background-color: darkgrey;
+    }
+
+    table#t02 th {
+        background-color: dimgrey;
+        color: whitesmoke;
+    }
+</style>
+
+<body>
+    <h2>Cell that spans two rows:</h2>
+    <table style="width:100%">
+        <caption>CRANK CALL NUMBERS</caption>
+        <tr>
+            <th>Name:</th>
+            <td>Moe Szyslak</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone:</th>
+            <td>7648-4377</td>
+        </tr>
+        <tr>
+            <td>123-4567</td>
+        </tr>
+    </table>
+    <br>
+    <h2>A table with a special style:</h2>
+    <table id="t01">
+        <caption>CRANK CALL NUMBERS</caption>
+        <tr>
+            <th>Name:</th>
+            <td>Moe Szyslak</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone:</th>
+            <td>7648-4377</td>
+        </tr>
+        <tr>
+            <td>123-4567</td>
+        </tr>
+    </table>
+    <br>
+    <h2>A table with a more styles:</h2>
+    <table id="t02">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Anita</td>
+            <td>Goodgrade</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Seymour</td>
+            <td>Butz</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Amanda</td>
+            <td>Hugginkiss</td>
+            <td>16</td>
+        </tr>
+        <td>Oliver</td>
+        <td>Homework</td>
+        <td>18</td>
+    </table>
+    <hr/>
+
+</html>
