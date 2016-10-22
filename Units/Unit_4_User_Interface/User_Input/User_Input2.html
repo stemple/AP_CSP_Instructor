@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="javascript" type="text/javascript" src="ui_functions.js"></script>
+    </head>
+    <body>
+        <p>Click the button for a random number between 0 and 1.</p>
+        <button onclick="document.getElementById('output').innerHTML=Math.random()">Click me.</button>
+        <br />
+        <br />
+        <div id="output"></div>
+        <p>Click the button for a random greeting.</p>
+        <button onclick="document.getElementById('greeting').innerHTML=randomGreeting()">Greeting?</button>
+        <br />
+        <br />
+        <div id="greeting"></div>
+        <p>Click the button for a random greeting.</p>
+        <button onclick="displayGreeting('greeting2')">Display Greeting?</button>
+        <br />
+        <br />
+        <div id="greeting2"></div>
+    </body>
+</html>
