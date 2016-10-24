@@ -1,3 +1,7 @@
+function displayGreeting(id) {
+    document.getElementById(id).innerHTML = randomGreeting();
+}
+
 function randomGreeting(){
     var random = Math.floor(Math.random()*4);
     switch (random) {
@@ -22,7 +26,7 @@ function checkPrime(number) {
     return true;
 }
 
-function displayPrimeTest(outputId, inputId) {
+function displayPrimeTest(inputId, outputId) {
     var input = document.getElementById(inputId).value;
     var outputText = "";
     if (checkPrime(input) == true) {
@@ -31,8 +35,4 @@ function displayPrimeTest(outputId, inputId) {
         outputText = "The number " + input + " is not prime number.";
     }
     document.getElementById(outputId).innerHTML = outputText;
-}
-
-function displayGreeting(id) {
-    document.getElementById(id).innerHTML = randomGreeting();
 }
