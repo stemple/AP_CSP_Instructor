@@ -61,6 +61,9 @@ function stack(num) {
     return sout;
 }
 
+/** This is an example solution from UC_4
+*
+*/
 function shuffle(a) {
     var range;
     var index;
@@ -73,30 +76,25 @@ function shuffle(a) {
     return a;
 }
 
-function checkZipList(codes){
-    
-}
-
+/** This is an example solution from UC_4
+*
+*/
 function validPhoneList(nums) {
     var validNums = [];
     for (i = 0; i < nums.length; i++) {
-        if (nums[i].charAt(3) == "-" && nums[i].length == 8 && Number(nums[i].slice(0, 3)) && Number(nums[i].slice(4))) {
+        if (nums[i].charAt(3) == "-" &&
+            nums[i].length == 8 &&
+            Number(nums[i].slice(0, 3))
+            && Number(nums[i].slice(4))) {
             validNums.push(nums[i]);
         }
     }
     return validNums;
 }
 
-function validZipList(codes) {
-    var validZips = [];
-    for(i = 0; i < codes.length; i++) {
-        if(codes[i].length == 5 && Number(codes[i]) && codes[i].charAt(0) == "9") {
-            validZips.push(codes[i]);
-        }
-    }
-    return validZips;
-}
-
+/** This is an example solution from UC_4
+*
+*/
 function validZipList(codes) {
     var validZips = [];
     for(i = 0; i < codes.length; i++) {
