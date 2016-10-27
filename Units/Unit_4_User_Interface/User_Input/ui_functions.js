@@ -27,12 +27,22 @@ function checkPrime(number) {
 }
 
 function displayPrimeTest(inputId, outputId) {
-    var input = document.getElementById(inputId).value;
+    // Get elements
+    var inputElem = document.getElementById(inputId);
+    var outputElem = document.getElementById(outputId);
+
+    // Do the calculation
+    var input = inputElem.value;
+    var is_prime = checkPrime(input);
+
+    // Produce output
     var outputText = "";
-    if (checkPrime(input) == true) {
+    if (is_prime == true) {
         outputText = "The number " + input + " is a prime number.";
     } else {
         outputText = "The number " + input + " is not prime number.";
     }
-    document.getElementById(outputId).innerHTML = outputText;
+
+    // Display the output
+    outputElem.innerHTML = outputText;
 }
