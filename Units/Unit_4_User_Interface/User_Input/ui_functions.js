@@ -45,4 +45,5 @@ function displayPrimeTest(inputId, outputId) {
 
     // Display the output
     outputElem.innerHTML = outputText;
+    // new file
 }
