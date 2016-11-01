@@ -1,21 +1,3 @@
-function displayGreeting(id) {
-    document.getElementById(id).innerHTML = randomGreeting();
-}
-
-function randomGreeting(){
-    var random = Math.floor(Math.random()*4);
-    switch (random) {
-        case 0:
-            return "Hola!";
-        case 1:
-            return "Bonjour";
-        case 2:
-            return "こんにちは";
-        default:
-            return "Howdy";
-    }
-}
-
 function checkPrime(number) {
     // Get the floored square root of the incoming number
     // This is where we need to stop.
@@ -38,8 +20,10 @@ function displayCheckPrime(inputId, outputId) {
     // call the checkPrime function to determine the output text.
     if (checkPrime(input) == true) {
         outputText = "The number " + input + " is a prime number.";
+        document.getElementById(outputId).style.color = "green";
     } else {
         outputText = "The number " + input + " is not prime number.";
+        document.getElementById(outputId).style.color = "red";
     }
     // Update the output element's inner HTML
     document.getElementById(outputId).innerHTML = outputText;
