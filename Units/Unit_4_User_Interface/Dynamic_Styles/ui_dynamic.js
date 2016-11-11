@@ -13,18 +13,48 @@ function checkPrime(number) {
     return true;
 }
 
+
 function displayCheckPrime(inputId, outputId) {
     // Get the value from the input text box
     var input = document.getElementById(inputId).value;
     var outputText = "";
     // call the checkPrime function to determine the output text.
-    if (checkPrime(input) == true) {
+    if (isNaN(input)) {
+        outputText = "The value " + input + " is not a number.";
+        changeElementClass(outputId, "invalid");
+    } else if (checkPrime(input) == true) {
         outputText = "The number " + input + " is a prime number.";
-        document.getElementById(outputId).style.color = "green";
+        changeElementClass(outputId, "success");
     } else {
         outputText = "The number " + input + " is not prime number.";
-        document.getElementById(outputId).style.color = "red";
+        changeElementClass(outputId, "fail");
     }
     // Update the output element's inner HTML
     document.getElementById(outputId).innerHTML = outputText;
+}
+
+function setSuccessStyle(id) {
+  var el = document.getElementById(id);
+  el.style.color = "green";
+}
+
+function setFailStyle(id) {
+    var el = document.getElementById(id);
+    el.style.color = "grey";
+}
+
+function setInvalidStyle(id) {
+    var el = document.getElementById(id);
+    el.style.color = "red";
+    el.style.fontSize = "20px";
+    el.style.borderStyle = "solid";
+    el.style.borderColor = "red";
+    el.style.borderRadius = "5px";
+    el.style.padding = "5px";
+}
+
+
+function changeElementClass(id, className) {
+  var el = document.getElementById(id);
+  el.className = className;
 }

@@ -1,0 +1,11 @@
+.prime {
+    color: green
+}
+
+.not_prime {
+    color: darkslategrey
+}
+
+.invalid {
+    color: red
+}
