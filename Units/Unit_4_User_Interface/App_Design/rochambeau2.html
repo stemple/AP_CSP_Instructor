@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rochambeau2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = "stylesheet " href = "rochambeau.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="rochambeau.js"></script>
+</head>
+
+<body>
+    <p/><p/>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div id="banner" class="col-xs-8">
+                <h1>Rock, Paper, Scissors Game</h1>
+                <p>Let's Play Rock, Paper Scissors! Press your choice and then press PLAY!.</div>
+            <div class="col-xs-2"></div>
+        </div>
+    </div>
+    <p/><p/><p/><p/><p/><p/>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2"></div>
+                <div class="col-xs-7">
+                    <div class="btn-group btn-group-lg">
+                        <button type="button" class="btn btn-success" onclick="storePlayerChoice(0)">Rock</button>
+                        <button type="button" class="btn btn-success" onclick="storePlayerChoice(1)">Paper</button>
+                        <button type="button" class="btn btn-success" onclick="storePlayerChoice(2)">Scissors</button>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <input type="button" onclick="displayGameResult('result')" value="Play" class="btn btn-success btn-lg">
+                </div>
+            </div>
+        </div>
+        <p/><p/><p/>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <div id="result"></div>
+                </div>
+                <div class="col-xs-2"></div>
+            </div>
+        </div>
+</body>
+
+</html>
