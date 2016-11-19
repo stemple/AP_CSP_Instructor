@@ -1,4 +1,4 @@
-// This is the varaible that stores the score - wins(1), losses(-1), ties(0).
+// This is the varaible that stores the score - wins(0), ties(1), losses(2).
 var score = [0,0,0];
 
 // The variables store the current player's and computer's choices - 0 = Rock, 1 = Paper, 2 = Scissors
@@ -6,12 +6,12 @@ var currentChoice;
 var computerChoice;
 
 function playGame(){
-    computerChoice = Math.ceil(Math.random()*2);
+    computerChoice = Math.floor(Math.random()*3);
     console.log("Computer Choice = " + computerChoice);
     console.log("Player Choice = " + currentChoice);
     if (currentChoice == computerChoice) {
         // We have a tie!
-        return 2;
+        return 1;
     } else if (currentChoice == 0 && computerChoice == 2) {
         // Rock beats scissors - a win!
         return 0;
@@ -23,14 +23,14 @@ function playGame(){
         return 0;
     } else {
         // All other combinations are losses
-        return 1;
+        return 2;
     }
 }
 
 function displayScoreBoard(winsId, lossesId, tiesId){
     document.getElementById(winsId).innerHTML = score[0];
-    document.getElementById(lossesId).innerHTML = score[1];
-    document.getElementById(tiesId).innerHTML = score[2];
+    document.getElementById(lossesId).innerHTML = score[2];
+    document.getElementById(tiesId).innerHTML = score[1];
 }
 
 function updateScore(val){
@@ -45,11 +45,11 @@ function displayGameResult(resultId){
     if (result == 0) {
         // Display that it was a win
         document.getElementById(resultId).innerHTML = message + "YOU WIN! " + score;
-    } else if (result == 1) {
-        // Display that it was a win
+    } else if (result == 2) {
+        // Display that it was a loss
         document.getElementById(resultId).innerHTML = message + "YOU LOOSE! " + score;
     } else {
-        // Display that it was a win
+        // Display that it was a tie
         document.getElementById(resultId).innerHTML = message + "A tie. " + score;
     }
 }
