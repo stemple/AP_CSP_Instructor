@@ -44,15 +44,15 @@ function displayGameResult(resultId){
     var message = "Your choice was " + choices[currentChoice] + " and the computer's choice was " + choices[computerChoice] + "<br/>";
     if (result == 0) {
         // Display that it was a win
-        document.getElementById(resultId).innerHTML = message + "YOU WIN! " + score;
+        document.getElementById(resultId).innerHTML = message + "YOU WIN!";
         document.getElementById(resultId).className = "alert alert-success";
     } else if (result == 2) {
         // Display that it was a loss
-        document.getElementById(resultId).innerHTML = message + "YOU LOOSE! " + score;
+        document.getElementById(resultId).innerHTML = message + "YOU LOOSE! ";
         document.getElementById(resultId).className = "alert alert-danger";
     } else {
         // Display that it was a tie
-        document.getElementById(resultId).innerHTML = message + "A tie. " + score;
+        document.getElementById(resultId).innerHTML = message + "A tie. ";
         document.getElementById(resultId).className = "alert alert-info";
     }
 }
