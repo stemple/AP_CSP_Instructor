@@ -14,12 +14,26 @@
 <body>
     <div class="container">
         <h1>Rock, Paper, Scissors Game</h1>
-        <p>Let's Play Rock, Paper Scissors! Press your choice and then press PLAY!</p>
+        <p>Let's Play Rock, Paper Scissors! Press your choice and then press PLAY!.</p>
         <p>
             <button type="button" class="btn btn-default" onclick="storePlayerChoice(0)">Rock</button>
             <button type="button" class="btn btn-default" onclick="storePlayerChoice(1)">Paper</button>
             <button type="button" class="btn btn-default" onclick="storePlayerChoice(2)">Scissors</button>
         </p>
+        <p>
+            <button type="button" class="btn btn-default" onclick="displayGameResult('result'), displayScoreBoard('wins', 'losses', 'ties')">Play</button>
+        </p>
+        <p id="result"></p>
+        <div id="scoreboard">
+        <table class="table">
+            <tr>
+                <td>Wins:</td><td>Losses:</td><td>Ties:</td>
+            </tr>
+            <tr>
+                <td id="wins">0</td><td id="losses">0</td><td id="ties">0</td>
+            </tr>
+        </table>
+        </div>
     </div>
 </body>
 </html>
