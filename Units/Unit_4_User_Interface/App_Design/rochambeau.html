@@ -21,9 +21,19 @@
                         <button type="button" class="btn btn-default" onclick="storePlayerChoice(2)">Scissors</button>
                     </div>
         <p></p>
-        <input type="button" onclick="displayGameResult('result')" value="Play" class="btn btn-primary">
+        <input type="button" onclick="displayGameResult('result'), displayScoreBoard('wins', 'losses', 'ties')" value="Play" class="btn btn-primary">
         <p></p>
         <div id="result"></div>
+        <div id="scoreboard">
+        <table class="table">
+            <tr>
+                <td>Wins:</td><td>Losses:</td><td>Ties:</td>
+            </tr>
+            <tr>
+                <td id="wins">0</td><td id="losses">0</td><td id="ties">0</td>
+            </tr>
+        </table>
+        </div>
     </div>
 </body>
 </html>
