@@ -1,24 +1,27 @@
 // This is the varaible that stores the score - wins(0), ties(1), losses(2).
 var score = [0,0,0];
 
-// The variables store the current player's and computer's choices - 0 = Rock, 1 = Paper, 2 = Scissors
-var currentChoice;
+// The variables store the current player's and computer's choices
+// 0 = Rock, 1 = Paper, 2 = Scissors
+var playerChoice;
 var computerChoice;
 
 function playGame(){
+    // Generate computer's random choice
     computerChoice = Math.floor(Math.random()*3);
     console.log("Computer Choice = " + computerChoice);
     console.log("Player Choice = " + currentChoice);
-    if (currentChoice == computerChoice) {
+    // Here is the RPS ruleset algorithm
+    if (playerChoice == computerChoice) {
         // We have a tie!
         return 1;
-    } else if (currentChoice == 0 && computerChoice == 2) {
+    } else if (playerChoice == 0 && computerChoice == 2) {
         // Rock beats scissors - a win!
         return 0;
-    } else if (currentChoice == 1 && computerChoice == 0) {
+    } else if (playerChoice == 1 && computerChoice == 0) {
         // Paper beats scissors - a win!
         return 0;
-    } else if (currentChoice == 2 && computerChoice == 1) {
+    } else if (playerChoice == 2 && computerChoice == 1) {
         // Scissors beats paper - a win!
         return 0;
     } else {
@@ -58,5 +61,5 @@ function displayGameResult(resultId){
 }
 
 function storePlayerChoice(choice) {
-    currentChoice = choice;
+    playerChoice = choice;
 }
