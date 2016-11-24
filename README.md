@@ -8,7 +8,8 @@ The units so far are:
 2. The Basics
 3. Algorithms
 4. Designing User Interfaces
-5. The Software Lifecycle
+5. QA - Testing, Debugging, and Error Handling
 6. Data and Data Abstraction
 7. Graphics and Media for Software
 8. Client-Server Applications
+9. IoT and Physical Computing
