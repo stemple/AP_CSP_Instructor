@@ -13,33 +13,38 @@
 
 <body>
     <div class="container">
-        <h1>Awesome Calculator</h1>
+        <h1>Calculator</h1>
         <p>
             <input type="text" id="screen">
         </p>
         <p>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('1')">1</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('2')">2</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('3')">3</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('+')">+</button>
+            <button type="button" class="btn btn-default" onclick="allClear()">AC</button>
+            <button type="button" class="btn btn-default" onclick="changeSign()">+/-</button>
+            <button type="button" class="btn btn-default" onclick="percentage()">%</button>
+            <button type="button" class="btn btn-default" onclick="divide()">/</button>
         </p>
         <p>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('4')">4</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('5')">5</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('6')">6</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('-')">-</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('7')">7</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('8')">8</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('9')">9</button>
+            <button type="button" class="btn btn-default" onclick="multiply()">x</button>
         </p>
         <p>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('7')">7</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('8')">8</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('9')">9</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('x')">x</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('4')">4</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('5')">5</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('6')">6</button>
+            <button type="button" class="btn btn-default" onclick="subtract()">-</button>
         </p>
         <p>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('.')">.</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('0')">0</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('=')">=</button>
-            <button type="button" class="btn btn-default" onclick="regButtonPress('/')">/</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('1')">1</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('2')">2</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('3')">3</button>
+            <button type="button" class="btn btn-default" onclick="add()">+</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-default" onclick="processNumber('0')">0</button>
+            <button type="button" class="btn btn-default" onclick="processNumber('.')">.</button>
+            <button type="button" class="btn btn-default" onclick="equals()">=</button>
         </p>
     </div>
 </body>

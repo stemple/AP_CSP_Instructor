@@ -1,14 +1,72 @@
-var args = [];
 var screenDigits = "";
+var currentNum = 0;
+var lastOperation = "";
+var total = 0;
 
-function regButtonPress(val) {
-    if (parseInt(val) || val == '.' || val == '0') {
-        screenDigits = screenDigits + val;
-        console.log(screenDigits);
-        displayScreenDigits("screen");
-    } else {
-        parseArgs(val);
+function processNumber(num) {
+    if (lastOperation == '=') {
+        screenDigits = "";
     }
+    screenDigits = screenDigits + num;
+    console.log(screenDigits);
+    displayScreenDigits("screen");
+    currentNum = Number(screenDigits);
+}
+
+function allClear() {
+    total = 0;
+    screenDigits = "";
+    lastOperation = "";
+    currentNum = 0;
+    displayScreenDigits("screen");
+    console.log(currentNum);
+}
+
+function changeSign() {
+    screenDigits = "-" + screenDigits;
+    displayScreenDigits("screen");
+    currentNum = Number(screenDigits);
+    displayScreenDigits("screen");
+    console.log(currentNum);
+}
+
+function percentage() {
+    currentNum = Number(screenDigits);
+    currentNum = currentNum * .01;
+    screenDigits = currentNum;
+    displayScreenDigits("screen");
+    console.log(currentNum);
+}
+
+function add() {
+    calculate();
+    lastOperation = '+'
+}
+
+function subtract() {
+    calculate();
+    lastOperation = '-'
+}
+
+function divide() {
+    calculate();
+    lastOperation = '/'
+}
+
+function multiply (){
+    calculate();
+    lastOperation = 'x'
+}
+
+function equals () {
+    calculate();
+    lastOperation = ''
+    screenDigits = total;
+    displayScreenDigits("screen");
+    console.log("total = " + total);
+    console.log(currentNum);
+    console.log(screenDigits);
+    currentNum = total;
 }
 
 function displayScreenDigits(screenId) {
@@ -16,46 +74,36 @@ function displayScreenDigits(screenId) {
     document.getElementById(screenId).setAttribute("value", screenDigits);
 }
 
-function parseArgs(val){
-    args.push(Number(screenDigits));
-    args.push(val);
-    calculate();
-    screenDigits = "";
-    console.log(args);
-}
-
 function calculate(){
-    var argument;
-    var total = 0;
-    for(var i = 0; i < args.length; i++) {
-        if (args[i] > 0) {
-            argument = args[i];
-            console.log("argument = " + argument);
-        } else if (args[i] == '+') {
-            total = total + argument;
-            screenDigits = total;
-            displayScreenDigits("screen");
-            console.log("total = " + total);
-        } else if (args[i] == '-') {
-            total = total - argument;
-            screenDigits = total;
-            displayScreenDigits("screen");
-            console.log("total = " + total);
-        } else if (args[i] == 'x') {
-            total = total * argument;
-            screenDigits = total;
-            displayScreenDigits("screen");
-            console.log("total = " + total);
-        } else if (args[i] == '/') {
-            total = total / argument;
-            screenDigits = total;
-            displayScreenDigits("screen");
-            console.log("total = " + total);
-        } else if (args[i] == '=') {
-            total = total;
-            screenDigits = total;
-            displayScreenDigits("screen");
-            console.log("total = " + total);
-        }
+    if (lastOperation == '+') {
+        total = total + currentNum;
+        screenDigits = total;
+        displayScreenDigits("screen");
+        screenDigits = "";
+        console.log("total = " + total);
+    } else if (lastOperation == '-') {
+        total = total - currentNum;
+        screenDigits = total;
+        displayScreenDigits("screen");
+        screenDigits = "";
+        console.log("total = " + total);
+    } else if (lastOperation == 'x') {
+        total = total * currentNum;
+        screenDigits = total;
+        displayScreenDigits("screen");
+        screenDigits = "";
+        console.log("total = " + total);
+    } else if (lastOperation == '/') {
+        total = total / currentNum;
+        screenDigits = total;
+        displayScreenDigits("screen");
+        screenDigits = "";
+        console.log("total = " + total);
+    } else {
+        total = currentNum;
+        currentNum = 0;
+        screenDigits = total;
+        displayScreenDigits("screen");
+        screenDigits = "";
     }
 }
