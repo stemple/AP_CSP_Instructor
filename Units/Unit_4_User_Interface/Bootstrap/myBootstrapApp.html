@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="../User_Input/ui_functions.js"></script>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Bootstrap UI Example</h1>
-        <p>Enter an amount in dollars and cents and press the "Make Change" button.</p>
-        <div class="col-xs-2">
-        <div class="input-group">
-            <div class="input-group-addon">$</div>
-            <input type="text" id="inputNum" class="form-control" placeholder="0.00">
-        </div>
-        </div>
-        <p></p>
-        <input type="button" onclick="" value="Make Change" class="btn btn-primary">
-        <p></p>
-        <div id="output"></div>
-    </div>
+    <h1>BOOTSTRAP BADGES<h1>
+    <hr>
+
+<!--badge basics-->
+    <h2>Badge Basics--></h2>
+<div class="container">
+ <a href="#">News <span class="badge">5</span></a>
+    <br>
+ <a href="#">Comments <span class="badge">10</span></a>
+    <br>
+ <a href="#">Updates <span class="badge">2</span></a>
+</div>
+
+<!--badges on buttons--><hr>
+    <h2>Badges on Buttons</h2>
+<div class="container">
+ <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+ <button type="button" class="btn btn-success">Success <span class="badge">3</span></button>
+ <button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>
+</div>
 </body>
 </html>

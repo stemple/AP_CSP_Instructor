@@ -1,4 +1,5 @@
-// This is the varaible that stores the score - wins(0), ties(1), losses(2).
+// This is the varaible that stores the score.
+// score[0] = wins, score[1] = ties, score[2] = losses
 var score = [0,0,0];
 
 // The variables store the current player's and computer's choices
@@ -39,7 +40,7 @@ function displayScoreBoard(winsId, lossesId, tiesId){
 
 function updateScore(val){
     ++score[val];
-    console.log(score);
+    console.log("The score is now " + score);
 }
 
 function displayGameResult(resultId){
