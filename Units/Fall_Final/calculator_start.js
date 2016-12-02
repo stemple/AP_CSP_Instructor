@@ -1,16 +1,18 @@
 /** TODO:
 * 1. Add these new functions: percentage, inverse, factorial, square and square root
 * 2. Bootstrap it to make it pretty!
-* 3. Make it so user can't type in digit screen.
+* 3. User can only type numbers in the display (30 max!), and the numbers are right aligned.
 * 4. Fix divide by 0 errors!
 * 5. Add the ability to clear the current input, but not memory.
-* 6. Challenge: Trig functions (in radian AND degree mode), and Exponents and Negative Exponents
+* 6. Challenge: Add trig functions (in radian AND degree mode)
+* 7. Extra Challenge: Add mc, m+, m-, mr butons that work!
+* 8. Super Challenge: Add ( and ) buttons that work!
+* 9. Super Duper Challenge: Add exponents (negatives too!)
 */
 
 var currentInput = "0";
 var memory = "0";
 var operator = 0;
-var MAXLENGTH = 30;
 
 // Helper function for displaying the current input
 function displayCurrentInput() {
@@ -19,14 +21,10 @@ function displayCurrentInput() {
 
 // Adds a digit to the current input
 function addDigit(dig) {
-    if (currentInput.length > MAXLENGTH) {
-        currentInput = "Aargh! Too long"; //limit length
+    if ((eval(currentInput) == 0) && (currentInput.indexOf(".") == -1)) {
+        currentInput = dig;
     } else {
-        if ((eval(currentInput) == 0) && (currentInput.indexOf(".") == -1)) {
-            currentInput = dig;
-        } else {
-            currentInput = currentInput + dig;
-        }
+        currentInput = currentInput + dig;
     }
     displayCurrentInput();
 }
