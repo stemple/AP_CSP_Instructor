@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    div {
+        border: solid 1px white;
+        color: black;
+        background-color: lightgrey;
+    }
+
+</style>
+
+<body>
+    <h1>BOOTSTRAP GRID</h1>
+    <hr>
+    <h4>12 columns</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+            <div class="col-sm-1">span 1</div>
+        </div>
+    </div>
+
+    <h4>6 columns</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">span 2</div>
+            <div class="col-sm-2">span 2</div>
+            <div class="col-sm-2">span 2</div>
+            <div class="col-sm-2">span 2</div>
+            <div class="col-sm-2">span 2</div>
+            <div class="col-sm-2">span 2</div>
+        </div>
+    </div>
+
+    <h4>4 columns</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">span 3</div>
+            <div class="col-sm-3">span 3</div>
+            <div class="col-sm-3">span 3</div>
+            <div class="col-sm-3">span 3</div>
+        </div>
+    </div>
+
+    <h4>3 columns</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">span 4</div>
+            <div class="col-sm-4">span 4</div>
+            <div class="col-sm-4">span 4</div>
+        </div>
+    </div>
+
+    <h4>2 columns</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">span 6</div>
+            <div class="col-sm-6">span 6</div>
+        </div>
+    </div>
+
+    <h4>1 columns</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">span 12</div>
+        </div>
+    </div>
+    <hr>
+
+    <!--unequal columns-->
+    <h2>Unequal Columns</h2>
+    <h4>75%-25% split</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">span 3</div>
+            <div class="col-sm-9">span 9</div>
+        </div>
+    </div>
+
+    <h4>33.3%-66.7% split</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">span 4</div>
+            <div class="col-sm-8">span 8</div>
+        </div>
+    </div>
+
+    <h4>16.7%-66.7%-16.7% split</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">span 2</div>
+            <div class="col-sm-8">span 8</div>
+            <div class="col-sm-2">span 8</div>
+        </div>
+    </div>
+    <hr>
+    <!--nested columns-->
+    <h2>Nested Column</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">span 8
+                <div class="row">
+                    <div class="col-sm-6">nested span 6</div>
+                    <div class="col-sm-6">nested span 6</div>
+                </div>
+            </div>
+            <div class="col-sm-4">span 4</div>
+        </div>
+    </div>
+    <hr>
+    <!--uneven content-->
+    <h2>Uneven Content</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">Column 1
+                <br> Resize the browser window to see the effect. Also try to remove the div clearfix line and see what happens.</div>
+            <div class="col-xs-6 col-sm-3">Column 2</div>
+            <!-- Add clearfix for only the required viewport -->
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-3">Column 3</div>
+            <div class="col-xs-6 col-sm-3">Column 4</div>
+        </div>
+    </div>
+    <hr>
+</body>
+
+</html>
