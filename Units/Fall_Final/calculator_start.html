@@ -8,39 +8,39 @@
 
 <body>
     <h1>Calculator App</h1>
-    <div id="calculator">
+    <form>
         <p>
-            <input type="text" id="screen">
+            <input type="text" id="screen"> </p>
+        <p>
+            <button type="button" onclick="allClear()">AC</button>
+            <button type="button" onclick="">+/-</button>
+            <button type="button" onclick="">%</button>
+            <button type="button" onclick="storeOperator('/')">/</button>
         </p>
         <p>
-            <button type="button"  onclick="allClear()">AC</button>
-            <button type="button"  onclick="">+/-</button>
-            <button type="button"  onclick="">%</button>
-            <button type="button"  onclick="storeOperator('/')">/</button>
+            <button type="button" onclick="addDigit('7')">7</button>
+            <button type="button" onclick="addDigit('8')">8</button>
+            <button type="button" onclick="addDigit('9')">9</button>
+            <button type="button" onclick="storeOperator('*')">x</button>
         </p>
         <p>
-            <button type="button"  onclick="addDigit('7')">7</button>
-            <button type="button"  onclick="addDigit('8')">8</button>
-            <button type="button"  onclick="addDigit('9')">9</button>
-            <button type="button"  onclick="storeOperator('*')">x</button>
+            <button type="button" onclick="addDigit('4')">4</button>
+            <button type="button" onclick="addDigit('5')">5</button>
+            <button type="button" onclick="addDigit('6')">6</button>
+            <button type="button" onclick="storeOperator('-')">-</button>
         </p>
         <p>
-            <button type="button"  onclick="addDigit('4')">4</button>
-            <button type="button"  onclick="addDigit('5')">5</button>
-            <button type="button"  onclick="addDigit('6')">6</button>
-            <button type="button"  onclick="storeOperator('-')">-</button>
+            <button type="button" onclick="addDigit('1')">1</button>
+            <button type="button" onclick="addDigit('2')">2</button>
+            <button type="button" onclick="addDigit('3')">3</button>
+            <button type="button" onclick="storeOperator('+')">+</button>
         </p>
         <p>
-            <button type="button"  onclick="addDigit('1')">1</button>
-            <button type="button"  onclick="addDigit('2')">2</button>
-            <button type="button"  onclick="addDigit('3')">3</button>
-            <button type="button"  onclick="storeOperator('+')">+</button>
+            <button type="button" onclick="addDigit('0')">0</button>
+            <button type="button" onclick="addDecimal()">.</button>
+            <button type="button" onclick="calculate()">=</button>
         </p>
-        <p>
-            <button type="button"  onclick="addDigit('0')">0</button>
-            <button type="button"  onclick="addDecimal()">.</button>
-            <button type="button"  onclick="calculate()">=</button>
-        </p>
-    </div>
+    </form>
 </body>
+
 </html>
