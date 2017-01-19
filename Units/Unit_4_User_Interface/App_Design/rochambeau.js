@@ -1,12 +1,16 @@
-// This is the varaible that stores the score.
+// Stores the score.
 // score[0] = wins, score[1] = ties, score[2] = losses
 var score = [0,0,0];
 
-// The variables store the current player's and computer's choices
+// Stores the current player's and computer's choices
 // 0 = Rock, 1 = Paper, 2 = Scissors
 var playerChoice;
 var computerChoice;
 
+/**
+ * [[Description]]
+ * @returns {[[Type]]} [[Description]]
+ */
 function playGame(){
     // Here is the game ruleset algorithm
     if (playerChoice == computerChoice) {
@@ -32,6 +36,12 @@ function playGame(){
     }
 }
 
+/**
+ * Displays the number of wins, losses, ties
+ * @param {number} winsId   id of element to contain # of wins
+ * @param {string} lossesId id of element to contain # of losses
+ * @param {string} tiesId   id of element to contain # of ties
+ */
 function displayScoreBoard(winsId, lossesId, tiesId){
     document.getElementById(winsId).innerHTML = score[0];
     document.getElementById(lossesId).innerHTML = score[2];
@@ -69,12 +79,19 @@ function displayGameResult(resultId){
     }
 }
 
+/**
+ * Stores the player's choice, then call's the function for storing the computer's choice
+ * @param {number} choice 0,1,2 for rock, paper, scissors
+ */
 function storePlayerChoice(choice) {
     playerChoice = choice;
     console.log("My choice = " + playerChoice);
-    storeComputerChoice();
+    store
 }
 
+/**
+ * Randomly generates a 0,1,2 for rock, paper, scissors
+ */
 function storeComputerChoice() {
     // Generate computer's random choice
     computerChoice = Math.floor(Math.random()*3);
