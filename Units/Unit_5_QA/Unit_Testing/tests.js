@@ -1,21 +1,19 @@
-QUnit.test("a basic test example", function (assert) {
-    var value = "hello";
-    assert.equal(value, "hello", "We expect value to be hello");
+QUnit.test("Test the addTwoArrays function.", function (assert) {
+    var a1 = [1, 2, 3];
+    var a2 = [3, 2, 1];
+    var a3 = [3, 2, 0];
+    var result = addTwoArrays(a1, a2);
+    var result2 = addTwoArrays(a3, a1);
+    assert.deepEqual(result, [4, 4, 4], "We expect result to be 4, 4, 4");
+    assert.deepEqual(result2, [4, 4, 3], "We expect result to be 4, 4, 3");
 });
 
-/**
-QUnit.test( "Test the arrayAdd function.", function( assert ) {
-    var arr1 = [1,2,3];
-    var arr2 = [4,5,6];
-    var arr3 = [-1, -2];
-    var result1 = addTwoArrays(arr1, arr2);
-    var result2 = addTwoArrays(arr2, arr1);
-    var result3 = addTwoArrays(arr1, arr3);
-    var result4 = addTwoArrays(arr3, arr1);
-    assert.deepEqual(result1, [5,7,9], "We expect the value [5,7,9]." );
-    assert.deepEqual(result2, [5,7,9], "We expect the value [5,7,9]." );
-    assert.deepEqual(result3, [0,0,3], "We expect the value [0,0,3]." );
-    assert.deepEqual(result4, [0,0,3], "We expect the value [0,0,3]." );
-    assert.deepEqual(result4, [0,0,3], "We expect the value [0,0,3]." );
+QUnit.test("Test the subTwoArrays function.", function (assert) {
+    var a1 = [1, 2, 3];
+    var a2 = [3, 2, 1];
+    var a3 = [3, 2, 0];
+    var result = subTwoArrays(a1, a2);
+    var result2 = subTwoArrays(a3, a1);
+    assert.deepEqual(result, [-2, 0, 2], "We expect result to be -2, 0, 2");
+    assert.deepEqual(result2, [2, 0, -3], "We expect result to be 2, 0, -3");
 });
-*/

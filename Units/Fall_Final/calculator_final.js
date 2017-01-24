@@ -20,6 +20,10 @@ function displayCurrentInput() {
     document.getElementById('screen').value = currentInput;
 }
 
+function getCurrentInput() {
+    return document.getElementById('screen').value;
+}
+
 // Adds a digit to the current input
 function addDigit(dig) {
     if (currentInput.length > MAXLENGTH) {
@@ -82,7 +86,8 @@ function calculate() {
 
 // Change the sign of the current input
 function changeSign() {
-
+    currentInput = currentInput * (-1);
+    displayCurrentInput();
 }
 
 // Clear the current input back to 0
