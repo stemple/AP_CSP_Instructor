@@ -6,7 +6,7 @@ function loadJSON() {
         http_request = new XMLHttpRequest();
     }
     catch (e) {
-        // Internet Explorer Browsers
+        // IE only...
         try {
             http_request = new ActiveXObject("Msxml2.XMLHTTP");
         }
@@ -19,9 +19,12 @@ function loadJSON() {
 
     http_request.onreadystatechange = function () {
         if (http_request.readyState == 4) {
-            console.log(http_request.responseText);
+            var result = http_request.responseText;
+            document.getElementById("demo").innerHTML = result;
+            console.log(http_request.result);
         }
     }
     http_request.open("GET", data_file, true);
     http_request.send();
 }
+

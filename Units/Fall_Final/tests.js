@@ -116,5 +116,4 @@ QUnit.test( "Inverse test", function( assert ) {
     currentInput = "0";
     memory = "0";
 });
-
 // Challenge tests go here...but not sure how to write these.

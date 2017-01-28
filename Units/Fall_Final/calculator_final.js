@@ -15,6 +15,8 @@ var memory = "0";
 var operator = 0;
 var MAXLENGTH = 30;
 
+window.onerror = function(messageOrEvent, source, lineno, colno, error) {console.log("error caught");}
+
 // Helper function for displaying the current input
 function displayCurrentInput() {
     document.getElementById('screen').value = currentInput;
@@ -75,7 +77,13 @@ function storeOperator(op) {
 // Calculate using operator, the memory and what is current
 function calculate() {
     if (operator == 1) { currentInput = eval(memory) * eval(currentInput); };
-    if (operator == 2) { currentInput = eval(memory) / eval(currentInput); };
+    if (operator == 2) {
+        if (currentInput == "0") {
+            throw new Error("Divide By 0 Error");
+        } else {
+            currentInput = eval(memory) / eval(currentInput);
+        }
+    }
     if (operator == 3) { currentInput = eval(memory) + eval(currentInput); };
     if (operator == 4) { currentInput = eval(memory) - eval(currentInput); };
 
@@ -102,6 +110,7 @@ function percentage() {
 
 // Calculate the factorial of the current input
 function factorial() {
+
 
 }
 
