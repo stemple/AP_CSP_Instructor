@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>OMDb API - The Open Movie Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./src/style.css" media="screen">
+    <link rel="stylesheet" href="./src/bootswatch.min.css">
+    <script type="text/javascript" src="./src/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./src/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./src/application.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        // <![CDATA[
+        if ("http:" == document.location.protocol || "https:" == document.location.protocol) {
+            document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://dq14tx02jmrhj.cloudfront.net" : "http://cdn.betaeasy.com") + "/betaeasy2.js' type='text/javascript'%3E%3C/script%3E"))
+        }
+        // ]]>
+    </script>
+    <script type="text/javascript">
+        // <![CDATA[
+        try {
+            BetaEasy.init({
+                betaId: '456'
+                , styleType: 'new'
+                , buttonAlign: 'right'
+                , language: 'en'
+                , buttonBackgroundColor: '#f00'
+                , buttonMouseHoverBackgroundColor: '#06C'
+                , buttonImageActive: 'en/2_silver.png'
+                , buttonImageHover: 'none'
+                , backgroundColor: 'rgb(136, 136, 136)'
+                , tabsInactiveColor: 'rgb(116, 116, 116)'
+                , tabsInactiveTextColor: 'rgb(196, 196, 196)'
+            });
+        }
+        catch (err) {}
+        // ]]>
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Usage -->
+        <!-- Parameters -->
+        <!-- Examples -->
+        <div class="bs-docs-section" id="examples">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1>Examples</h1> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bs-component">
+                        <form class="well form-search" id="search-by-title-form" onsubmit="return false;">
+                            <fieldset>
+                                <legend>By Title</legend>
+                            </fieldset>
+                            <div>
+                                <label class="control-label" for="t">Title:</label>
+                                <input type="text" id="t" name="t" class="input-small"> &nbsp;&nbsp;
+                                <label class="control-label" for="y">Year:</label>
+                                <input type="text" id="y" name="y" class="input-small" style="width: 100px;"> &nbsp;&nbsp;
+                                <label class="control-label">Plot:</label>
+                                <select name="plot" style="width: 100px;">
+                                    <option value="short" selected="">Short</option>
+                                    <option value="full">Full</option>
+                                </select> &nbsp;&nbsp;
+                                <label class="control-label">Response:</label>
+                                <select name="r" style="width: 100px;">
+                                    <option value="json">JSON</option>
+                                    <option value="xml">XML</option>
+                                </select> &nbsp;&nbsp;
+                                <button id="search-by-title-button" type="button" class="btn-sm btn-primary">Search</button>
+                                <button id="search-by-title-reset" type="reset" class="btn-sm">Reset</button>
+                            </div>
+                            <div class="hide" id="search-by-title-request">
+                                <br />
+                                <p>Request:</p> <pre class="alert alert-box"><a href="javascript:;" target="_blank"></a></pre> </div>
+                            <div id="search-by-title-progress" class="hide progress progress-info progress-striped active">
+                                <div class="progress-bar" style="width: 100%;"> </div>
+                            </div>
+                            <div class="hide" id="search-by-title-response">
+                                <p>Response:</p> <pre class="alert alert-success" style="margin-bottom: 0px; white-space: normal;"></pre> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
