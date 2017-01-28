@@ -42,7 +42,7 @@ function shuffle(arr) {
 }
 
 /**
- * Arranges and array from least to greatest
+ * Arranges an array from least to greatest
  * @param   {Array} a An array to sort
  * @returns {Array} The sorted array
  */
