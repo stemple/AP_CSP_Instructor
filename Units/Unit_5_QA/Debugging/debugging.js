@@ -1,5 +1,11 @@
 //THESE FUNCTIONS CONTAIN BUGS!!!!!
-//#1  Returns a row by col multiplication table
+
+/**
+ * This function creates an HTML times table
+ * @param   {number} row The row number
+ * @param   {number} col The column number
+ * @returns {string} The HTML table
+ */
 function multTable(row, col) {
     var table = "<table>";
     var x;
@@ -14,7 +20,12 @@ function multTable(row, col) {
     table = table + "</table>";
     return table;
 }
-//#2 Randomly shuffles the elements in an array
+
+/**
+ * Randomly shuffles the elements in an array
+ * @param   {Array} arr The array to shuffle
+ * @returns {Array} The shuffled array
+ */
 function shuffle(arr) {
     var shuffledArr = arr;
     var max = shuffledArr.length;
@@ -29,9 +40,13 @@ function shuffle(arr) {
     }
     return shuffledArr;
 }
-//#3  Arranges and array from least to greatest
+
+/**
+ * Arranges and array from least to greatest
+ * @param   {Array} a An array to sort
+ * @returns {Array} The sorted array
+ */
 function iSort(a) {
-    // this sorts a list of random numbers
     result = a;
     for (var i = 1; i < result.length; ++i) {
         var j = result[i];
