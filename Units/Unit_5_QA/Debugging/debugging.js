@@ -21,11 +21,12 @@ function multTable(row, col) {
     return table;
 }
 
+/********OMIT-Cannot be tested using QUnit
 /**
  * Randomly shuffles the elements in an array
  * @param   {Array} arr The array to shuffle
  * @returns {Array} The shuffled array
- */
+
 function shuffle(arr) {
     var shuffledArr = arr;
     var max = shuffledArr.length;
@@ -40,6 +41,7 @@ function shuffle(arr) {
     }
     return shuffledArr;
 }
+******************************************/
 
 /**
  * Arranges an array from least to greatest
@@ -59,3 +61,58 @@ function iSort(a) {
     }
     return result;
 }
+
+function bubbleSort(arr){
+   var len = arr.length;
+   for (var i = len-1; i>=0; i--){
+     for(var j = 1; j<=i; j++){
+       if(arr[j-1]>arr[j]){
+           var temp = arr[j-1];
+           arr[j-1] = arr[j];
+           arr[j] = temp;
+        }
+     }
+   }
+   return arr;
+}
+
+function selectionSort(arr){
+  var minIdx, temp,
+      len = arr.length;
+  for(var i = 0; i < len; i++){
+    minIdx = i;
+    for(var  j = i+1; j<len; j++){
+       if(arr[j]<arr[minIdx]){
+          minIdx = j;
+       }
+    }
+    temp = arr[i];
+    arr[i] = arr[minIdx];
+    arr[minIdx] = temp;
+  }
+  return arr;
+}
+
+function insertionSort(arr){
+  var i, len = arr.length, el, j;
+
+  for(i = 1; i<len; i++){
+    el = arr[i];
+    j = i;
+
+    while(j>0 && arr[j-1]>toInsert){
+      arr[j] = arr[j-1];
+      j--;
+   }
+
+   arr[j] = el;
+  }
+
+  return arr;
+}
+
+
+
+
+
+
