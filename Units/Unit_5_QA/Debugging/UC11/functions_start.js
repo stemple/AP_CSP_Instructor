@@ -1,9 +1,9 @@
 //THESE FUNCTIONS CONTAIN BUGS!!!!!
 
 /**
- * This function returns a array of odd numbers from a string
+ * Returns a array of odd numbers from an array
  * @param {Array} a An array of numbers
- * @returns {Array} An array of odd numbers from a
+ * @returns {Array} An array of odd numbers
  */
 function oddSort(a) {
     var result = [];
@@ -16,7 +16,7 @@ function oddSort(a) {
 }
 
 /**
- * This function returns an array of the first n triangular numbers
+ * Returns an array of the first n triangular numbers
  * @param {number} n The number of triangular numbers to be returned
  * @returns {Array} A list of the triangular numbers
  */
@@ -34,7 +34,7 @@ function listTriangularNumbers(n) {
 }
 
 /**
- * This function creates an HTML times table
+ * Creates an HTML times table
  * @param {number} row The row number
  * @param {number} col The column number
  * @returns {string} The HTML table
