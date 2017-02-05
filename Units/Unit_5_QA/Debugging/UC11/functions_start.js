@@ -5,7 +5,7 @@
  * @param {Array} a An array of numbers
  * @returns {Array} An array of odd numbers
  */
-function oddSort(a) {
+function oddFilter(a) {
     var result = [];
     for (i = 0; i < a.length - 1; ++i) {
         if (a[i] % 2 != 0) {
