@@ -19,4 +19,3 @@ function inverse(x){
         return 0;
     }
 }
-
