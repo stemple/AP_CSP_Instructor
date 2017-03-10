@@ -1,6 +1,10 @@
 var rochambeau = {
 
-    gamesPlayed: 0,
+    ROCK: 0,
+    PAPER: 1,
+    SCISSORS: 2,
+
+    choices: ["Rock", "Paper", "Scissors"],
 
     WIN: 1,
     LOSE: -1,
@@ -8,15 +12,17 @@ var rochambeau = {
 
     player:  {
         choice: null,
-        wins: 0
     },
 
     computer: {
         choice: null,
-        wins: 0
     },
 
-    choices: new Array("Rock", "Paper", "Scissors"),
+    score: {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    },
 
     storeChoices: function(choice) {
         this.player.choice = choice;
@@ -24,50 +30,40 @@ var rochambeau = {
         this.computer.choice = Math.floor(Math.random() * 3);
     },
 
-    score: function() {
-        this.wins = 0;
-        this.losses = 0;
-        this.ties = 0;
-    },
-
     playGame: function () {
         ++this.gamesPlayed;
         // Here is the game ruleset algorithm
         if (this.player.choice == this.computer.choice) {
             // We have a tie!
-            console.log("tie");
+            ++this.score.ties;
             return this.TIE;
         }
-        else if (this.player.choice == 0 && this.computer.choice == 2) {
+        else if (this.player.choice == this.ROCK && this.computer.choice == this.SCISSORS) {
             // Rock beats scissors - a win!
-            ++this.player.wins;
-            console.log("Player Wins: " + this.player.wins);
-            return rochambeau.WIN;
-        }
-        else if (this.player.choice == 1 && this.computer.choice == 0) {
-            // Paper beats scissors - a win!
-            ++this.player.wins;
-            console.log("Player Wins: " + this.player.wins);
+            ++this.score.wins;
             return this.WIN;
         }
-        else if (this.player.choice == 2 && this.computer.choice == 1) {
+        else if (this.player.choice == this.PAPER && this.computer.choice == this.ROCK) {
+            // Paper beats rock - a win!
+            ++this.score.wins;
+            return this.WIN;
+        }
+        else if (this.player.choice == this.SCISSORS && this.computer.choice == this.PAPER) {
             // Scissors beats paper - a win!
-            ++this.player.wins;
-            console.log("Player Wins: " + this.player.wins);
+            ++this.score.wins;
             return this.WIN;
         }
         else {
             // All other combinations are losses
-            ++this.computer.wins;
-            console.log("Computer Wins: " + this.computer.wins);
+            ++this.score.losses;
             return this.LOSE;
         }
     },
 
     displayScoreBoard: function(winsId, lossesId, tiesId) {
-        document.getElementById(winsId).innerHTML = this.player.wins;
-        document.getElementById(lossesId).innerHTML = this.computer.wins;
-        document.getElementById(tiesId).innerHTML = this.gamesPlayed - (this.player.wins + this.computer.wins);
+        document.getElementById(winsId).innerHTML = this.score.wins;
+        document.getElementById(lossesId).innerHTML = this.score.losses;
+        document.getElementById(tiesId).innerHTML = this.score.ties;
     },
 
     displayGameResult: function(resultId) {
