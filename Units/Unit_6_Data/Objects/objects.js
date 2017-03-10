@@ -8,8 +8,39 @@ function Pet(name, type, owner){
     this.name = name;
     this.type = type;
     this.owner = owner;
+    this.sleepy = false;
+    this.awake = true;
+    this.hungry = false;
+
     this.speak = function() {
-        return "woof!";
+        if (this.awake == true) {
+            if(this.type == "Cat") {
+                return "Meow";
+            } else if (this.type == "Dog"){
+                return "Woof!";
+            }
+        } else {
+            return "Zzzzz";
+        }
+    };
+
+    this.nap = function() {
+        this.awake = false;
+    };
+
+    this.eat = function() {
+
+    };
+
+    this.rollOver = function() {
+        if(this.hungry == false && this.awake == true){
+
+        }
+    };
+
+    this.wakeUp = function() {
+        this.awake = true;
+        this.hungry = true;
     }
 }
 
