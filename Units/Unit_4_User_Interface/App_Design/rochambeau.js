@@ -8,8 +8,8 @@ var playerChoice;
 var computerChoice;
 
 /**
- * [[Description]]
- * @returns {[[Type]]} [[Description]]
+ * Game rules are executed with game result
+ * @returns {number} The result, 1 = win, 0 = tie, -1 = loss
  */
 function playGame(){
     // Here is the game ruleset algorithm
@@ -48,11 +48,20 @@ function displayScoreBoard(winsId, lossesId, tiesId){
     document.getElementById(tiesId).innerHTML = score[1];
 }
 
+/**
+ * Updates the score given an index
+ * @param {number} val 0 = win, 1 = tie, 2 = loss
+ */
 function updateScore(val){
     ++score[val];
     console.log("The score is now " + score);
 }
 
+
+/**
+ * Displays the result of the game
+ * @param {string} resultId The element id where the result will be written
+ */
 function displayGameResult(resultId){
     // Define an array of text labels for the choices 0, 1, 2;
     var choices = ["Rock", "Paper", "Scissors"];
@@ -86,7 +95,7 @@ function displayGameResult(resultId){
 function storePlayerChoice(choice) {
     playerChoice = choice;
     console.log("My choice = " + playerChoice);
-    store
+    storeComputerChoice();
 }
 
 /**
