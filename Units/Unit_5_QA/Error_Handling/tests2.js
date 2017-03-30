@@ -33,3 +33,32 @@ QUnit.test( "Errors thrown for getAreaCode", function( assert ) {
         getAreaCode("(4145) 444-5555");
     }, "More than 3 digits. An error should have been thrown." );
 });
+
+QUnit.test( "Errors thrown for getCoCode", function( assert ) {
+    assert.throws( function() {
+        getCoCode("(415) 44-5555");
+    }, "Missing a digit. An error should have been thrown." );
+
+    assert.throws( function() {
+        getCoCode("(415) 4444-5555");
+    }, "Too many digits. An error should have been thrown." );
+
+    assert.throws( function() {
+        getCoCode("(415) 4A4-5555");
+    }, "Invalid digit. An error should have been thrown." );
+});
+
+QUnit.test( "Errors thrown for getLineCode", function( assert ) {
+    assert.throws( function() {
+        getAreaCode("(415) 444-555");
+    }, "Missing a digit. An error should have been thrown." );
+
+    assert.throws( function() {
+        getAreaCode("(415) 444-55555");
+    }, "Too many digits. An error should have been thrown." );
+
+    assert.throws( function() {
+        getAreaCode("(41) 444-55A5");
+    }, "Invalid digit. An error should have been thrown." );
+
+});
