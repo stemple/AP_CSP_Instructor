@@ -10,6 +10,5 @@ The units so far are:
 4. Designing User Interfaces
 5. QA - Testing, Debugging, and Error Handling
 6. Data and Data Abstraction
-7. Graphics and Media for Software
-8. Client-Server Applications
-9. IoT and Physical Computing
+7. Web Programming
+8. Animation
