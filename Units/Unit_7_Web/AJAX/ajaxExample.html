@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <script src="ajaxFunctions.js"></script>
-</head>
-
-<body>
-    <h1>Using AJAX to read a text file.</h1>
-    <button type="button" onclick="loadTextDoc()">Get Text Data</button>
-    <div id="output1">Text Data</div>
-    <h1>Using AJAX to get JSON data from a database.</h1>
-    <button type="button" onclick="getJSONData()">Get JSON Data</button>
-    <div id="output2">JSON Data</div>
-</body>
-
+  </head>
+  <body>
+    <h3>Using AJAX to read data from a server.</h3>
+    <button type="button" onclick="sendRequest()">Get Data</button>
+    <h3>Response Data:</h3>
+    <div id="output1"></div>
+  </body>
 </html>

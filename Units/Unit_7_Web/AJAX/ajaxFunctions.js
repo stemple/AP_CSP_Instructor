@@ -1,22 +1,32 @@
-function loadTextDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("output1").innerHTML = this.responseText;
+/**
+ * Uses AJAX to query an internet data source
+ */
+function sendRequest() {
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            // We got a response from the server!
+            if(this.status === 200) {
+                // The request was successful!
+                displayResponseData(this.responseText);
+            } else {
+                // There was a problem with the request.
+                // For example, the response may have a 404 (Not Found)
+                // or 500 (Internal Server Error) response code.
+            }
+        } else {
+            // Waiting for a response...
         }
     };
-    xhttp.open("GET", "ajax_info.txt", true);
-    xhttp.send();
+    httpRequest.open("GET", "http://www.omdbapi.com/?t=star+wars", true);
+    httpRequest.send();
 }
 
-function getJSONData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("output2").innerHTML = this.responseText;
-        }
-    };
-    // This get JSON data from a online database of movies!
-    xhttp.open("GET", "http://www.omdbapi.com/?t=star+wars", true);
-    xhttp.send();
+
+/**
+ * Displays data on the page
+ * @param {string} data The data to be displayed
+ */
+function displayResponseData(data) {
+    document.getElementById("output1").innerHTML = data;
 }
