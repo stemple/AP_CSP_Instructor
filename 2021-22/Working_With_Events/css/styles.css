@@ -1,0 +1,28 @@
+
+html { 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    max-width: 600px;
+    font-family: sans-serif;
+    color: #333; 
+}
+
+h2 {
+    font-family: Sans-Serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button {
+    margin: auto;
+    padding: 10px;
+}

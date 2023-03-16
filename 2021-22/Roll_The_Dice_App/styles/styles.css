@@ -1,0 +1,35 @@
+#dice_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  h2 {
+    font-family: Sans-Serif;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .dice_container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #eeeeee;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .die {
+    margin: 10px;
+  }
+  
+  .button {
+    margin: auto;
+    padding: 10px;
+  }
+  
+  button {
+    width: 100px;
+  }

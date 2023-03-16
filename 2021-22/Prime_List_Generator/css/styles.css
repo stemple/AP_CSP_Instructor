@@ -1,0 +1,57 @@
+li { 
+    border: 1px solid #dedede; 
+    padding: 4px; 
+    margin: auto;
+    font-size: 12px; 
+    list-style: none;
+    text-align: center;
+}
+
+html { 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    max-width: 600px;
+    font-family: sans-serif;
+    color: #333; 
+}
+
+#prime_list_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-family: Sans-Serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.list_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    /**
+    height: 400px;
+    overflow: scroll;
+    **/
+}
+
+.button {
+    margin: auto;
+    padding: 10px;
+}

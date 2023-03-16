@@ -1,0 +1,45 @@
+html { 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: sans-serif;
+    background-color: dimgray;
+    color: #333; 
+}
+
+#animated_circle_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+}
+
+#animation_container {
+    width: 590px;
+    height: 590px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+#circle1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

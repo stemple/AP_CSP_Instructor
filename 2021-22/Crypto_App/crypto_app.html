@@ -1,0 +1,49 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Encrypt and Decrypt Application</title>
+</head>
+
+<body>
+    <div id="cipher_app">
+        <h2>Encrypt or Decrypt A Message</h2>
+        <div class="input_container">
+            <label>Enter Your Text:</label>
+            <input id="message_input" type="text"/>
+        </div>
+        <div class="input_container">
+            <label>Action</label>
+            <select name="cipher_action" id="cipher_action">
+                <option value="decrypt">Decrypt</option>
+                <option value="encrypt">Encrypt</option>
+            </select>
+        </div>
+        <div class="input_container">
+            <label>Caesar Cipher</label>
+            <input id="caesar" name="cipher_method" type="radio" value="caesar" checked/>
+        </div>
+        <div class="input_container">
+            <label>Vignere Cipher</label>
+            <input id="vignere" name="cipher_method" type="radio" value="vignere"/>
+        </div>
+        <div class="input_container">
+            <label>Caesar Cipher Shift:</label>
+            <input id="cc_shift" type="number"/>
+        </div>
+        <div class="input_container">
+            <label>Vignere Cipher Key:</label>
+            <input id="vc_key" type="text"/>
+        </div>
+        <div class="button">
+            <button id="cipherBtn">Process Message</button>
+        </div>
+        <div class="output">
+            <p id="processed_message"></p>
+        </div>
+        
+    </div>
+    <script src="scripts/crypto_app.js"></script>
+</body>
+
+</html>
