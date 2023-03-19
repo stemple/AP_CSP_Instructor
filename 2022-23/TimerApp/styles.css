@@ -1,0 +1,61 @@
+html { 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    max-width: 600px;
+    font-family: sans-serif;
+    color: #333; 
+}
+
+#timer_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+label {
+    margin: 5px;
+    text-align: right;
+}
+.output {
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #eee;
+    height: 50px;
+    overflow: scroll;
+    text-align: center;
+}
+.input_container {
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: 50px;
+}
+
+select {
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.button {
+    margin: auto;
+    padding: 10px;
+}
